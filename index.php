@@ -15,11 +15,12 @@
 <link rel="stylesheet" type="text/css" href="par.css">
 </head>
 <body>
-	
 	<form action="index1.php" method="post" enctype="multipart/form-data">
 	<input type="file" name="file">
 	Title<input type="text" name="txt">
 	<input type="submit" name="submit">
     </form>
+
+    
 </body>
 	
