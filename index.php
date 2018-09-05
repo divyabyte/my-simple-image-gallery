@@ -1,5 +1,6 @@
 <html>
 <head>
+	
 <title>This will cause a conflict!</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
