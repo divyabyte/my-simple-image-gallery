@@ -1,0 +1,17 @@
+
+body { 
+  background: url(image/ii.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg{
+	width: 150px;
+	height: 100px;
+	margin-left: 10px;
+	display: inline-block;
+	box-shadow: 3px 3px 10px #000000;
+	webkit-box-shadow:3px 3px 10px #000000;
+}

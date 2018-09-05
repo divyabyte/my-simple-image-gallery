@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+    $("#a1").hover(function(){
+        $("div").slideToggle(1000);
+    });
+});
+
+</script>
+<style>
+	.ul 
+   {
+      list-style-type: none;
+      top: 20px; 
+      padding:0;
+      margin:0; 
+   }
+ .ll 
+    {
+    	float: left;
+	    padding: 14px 16px; 
+	    background-color: black;
+	    color: white;
+    } 
+    #list{
+    padding: 5px;
+    margin: 2px;
+    background-color:green;
+}
+ 
+</style>
+</head>
+<body>
+	<ul class="ul"> 
+     <li class="ll"><a class="nn">Home</a></li>
+	 <li class="ll" ><a class="nn">Links</a></li>
+	 <li class="ll" id="a1"><a class="nn">Pages</a></li>
+	 	  <div id="list" style="display: none">
+	 	<li>Page1</li>
+	 	<li>Page2</li>
+	 	<li>Page3</li>
+	 </div>
+    </ul>
+</body>
+</html>
