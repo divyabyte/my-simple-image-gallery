@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Hello , miss singhal!</title>
+<title>Hello , mr singh</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
