@@ -1,27 +1,40 @@
-<html>
+<html> 
 <head>
-	
 <title>This will cause a conflict!</title>
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!-- Add mousewheel plugin (this is optional) -->
-<script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
-<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.7"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
+           $("#fileSelector").change(function(){
+            //itna samjha aya?
+            //jQuery selector pata hai?
+            //# means id
+            //. means class
+            //us id k change pe
+            var selected_files = this.files; //this gives as an array, with all the selected files, ok?
+
+            //We need the first file form selected files, right?
+            var ourFile = selected_files[0];
+
+            console.log("Selected file is: "+ourFile.name)
+
+
+            //but we can nto save in db with this. after refresh it will be gone..
+            //so we will need to upload the file in uploads folder
+            //and save its url in our db
+            //example dikhata hu..ok?
+
+            //itna clear?  ha.. ok.. now where do you want the selected image to apear?
+            //for 
+
+        });
 </script>
+
 <link rel="stylesheet" type="text/css" href="par.css">
 </head>
-<body>
-	<form action="index1.php" method="post" enctype="multipart/form-data">
-	<input type="file" name="file">
-	Title<input type="text" name="txt">
-	<input type="submit" name="submit">
+<body class=>
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" id="fileSelector" name="file">
+		<input type="submit" name="submit" value="upload image">
+		<button><a href="/mygallery/upload.php">View Images</button>
     </form>
 
     
 </body>
-	

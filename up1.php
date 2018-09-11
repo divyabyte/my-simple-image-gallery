@@ -1,33 +1,19 @@
-<?php
-include("mysqlconnect.php");
-
-    function GetImageExtension($imagetype)
-     {
-       if(empty($imagetype)) return false;
-       switch($imagetype)
-       {
-           case 'image/bmp': return '.bmp';
-           case 'image/gif': return '.gif';
-           case 'image/jpeg': return '.jpg';
-           case 'image/png': return '.png';
-           default: return false;
-       }
-     }
-
-if (!empty($_FILES["file"]["name"])) {
-    $file_name=$_FILES["file"]["name"];
-    $temp_name=$_FILES["file"]["tmp_name"];
-    $imgtype=$_FILES["file"]["type"];
-    $ext= GetImageExtension($imgtype);
-    $target_path = "image/thumb".$ext;
-
-if(move_uploaded_file($temp_name, $target_path)) {
-	$txt=$_POST['txt'];
-    $query_upload="INSERT into image('name','tittle') VALUES
-('".$target_path."','".$txt."')";
-    mysql_query($query_upload) or die("error in $query_upload == ".mysql_error()); 
-}else{
-   exit("Error While uploading image on the server");
-}
-}
-?>
+<img id="imgFileUpload" alt="Select File" title="Select File" src="orange.png" style="cursor: pointer" />
+<br />
+<span id="spnFilePath"></span>
+<input type="file" id="FileUpload1" style="display: none" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var fileupload = $("#FileUpload1");
+        var filePath = $("#spnFilePath");
+        var image = $("#imgFileUpload");
+        image.click(function () {
+            fileupload.click();
+        });
+        fileupload.change(function () {
+            var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+            filePath.html("<b>Selected File: </b>" + fileName);
+        });
+    });
+</script>
